@@ -1,0 +1,424 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romelyn Econg | Creative Website</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: #360303;
+    color: white;
+}
+header {
+    background: #2f0303;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #2a030a;
+}
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #f2f6f3;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+nav button:hover,
+nav button.active {
+    color: #fafefc;
+    border-bottom: 2px solid #d8caca;
+}
+.page {
+    display: none;
+    min-height: 82vh;
+    padding: 70px 8%;
+    animation: fade 0.4s ease;
+}
+.page.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@keyframes fade {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 35px;
+    color: #f0e9e9;
+    margin-bottom: 20px;
+}
+h3 {
+    color: #ffe1e1;
+    margin-bottom: 15px;
+}
+p {
+    color: #ffffff;
+    line-height: 1.8;
+    font-size: 17px;
+}
+.highlight {
+    color: #b30909;
+}
+.btn {
+    display: inline-block;
+    background: #942020;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #2e0203;
+    transform: translateY(-3px);
+}
+#home {
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg, #1f0405, #200404, #1b0102
+    );
+}
+#home p {
+    max-width: 700px;
+}
+.services-container,
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+.card {
+    flex: 1 1 250px;
+    max-width: 350px;
+    background: #8e121a;
+    border: 1px solid #791515;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #77090d;
+    box-shadow: 0 10px 25px #320408f1;
+}
+.card .symbol {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.portfolio-card {
+    background: #5d0610;
+    border-radius: 15px;
+    border: 1px solid #4b0606;
+    overflow: hidden;
+    flex: 1 1 250px;
+    max-width: 350px;
+    transition: 0.3s;
+}
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    border-color: #340206;
+}
+.portfolio-image {
+    height: 180px;
+    background: linear-gradient(135deg, #370309, #3c0404);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+.portfolio-info {
+    padding: 25px;
+}
+.about-box {
+    max-width: 850px;
+    padding: 35px;
+    background: #330202;
+    border: 1px solid #390404;
+    border-radius: 15px;
+}
+.about-box p {
+    margin-bottom: 15px;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.contact-info,
+.contact-form {
+    flex: 1 1 280px;
+    max-width: 500px;
+    background: #250303;
+    padding: 30px;
+    border: 1px solid #320303;
+    border-radius: 15px;
+}
+.contact-info p {
+    margin: 15px 0;
+}
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #380306;
+    border-radius: 8px;
+    background: #250101;
+    color: white;
+    font-size: 16px;
+}
+textarea {
+    height: 130px;
+    resize: vertical;
+}
+footer {
+    background: #290101;
+    border-top: 1px solid #1f0202;
+    text-align: center;
+    padding: 25px;
+}
+footer p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav {
+        justify-content: center;
+    }
+    nav button {
+        font-size: 13px;
+        padding: 8px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .page {
+        padding: 50px 6%;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">Aube de Soie Studios</div>
+    <nav>
+        <button class="active"
+        onclick="showPage('home', this)">Home</button>
+        <button onclick="showPage('services', this)">
+        Services</button>
+        <button onclick="showPage('portfolio', this)">
+        Portfolio</button>
+        <button onclick="showPage('about', this)">
+        About</button>
+        <button onclick="showPage('contacts', this)">
+        Contacts</button>
+    </nav>
+</header>
+<section id="home" class="page active">
+    <h1>Welcome to My <span class="highlight">Website</span></h1>
+    <p>
+        Welcome! I'm Romelyn Econg, an aspiring Animation and
+        Multimedia Arts student who loves bringing ideas to life through creativity such as film making, video editing, and photography.
+        Explore my site to see my work, background, and services.
+    </p>
+    <button class="btn" onclick="goTo('portfolio')">
+        View My Work
+    </button>
+</section>
+<section id="services" class="page">
+    <h3>What I Offer</h3>
+    <h2>Services</h2>
+    <p>
+        Helping you map out ideas and turn concepts into clear project plans.
+    </p>
+    <div class="services-container">
+        <div class="card">
+            <div class="symbol">🎞️</div>
+            <h3>Graphic Design</h3>
+            <p>
+                Crafting cinematic experiences that connect, inspire, and stay with you.
+            </p>
+        </div>
+        <div class="card">
+            <div class="symbol">🎬</div>
+            <h3>Video Editing</h3>
+            <p>
+                Shaping footage into seamless, impactful visuals — precision meets creativity.
+            </p>
+        </div>
+        <div class="card">
+            <div class="symbol">📸</div>
+            <h3>Photography</h3>
+            <p>
+                Turn your special moments into pictures you’ll love to keep.
+            </p>
+        </div>
+    </div>
+</section>
+<section id="portfolio" class="page">
+    <h3>My Work</h3>
+    <h2>Portfolio</h2>
+    <p>
+        A collection of creative works and projects
+        related to design and multimedia.
+    </p>
+    <div class="portfolio-container">
+        <div class="portfolio-card">
+            <img src="film.jpg" alt="My Image"width="100%" height="50%">
+            <div class="portfolio-info">
+                <h3>Film Making</h3>
+                <p>
+                    Make films that tell your story beautifully.
+                </p>
+            </div>
+        </div>
+        <div class="portfolio-card">
+           <img src="editing.jpg" alt="My Image"width="100%" height="50%">
+            <div class="portfolio-info">
+                <h3>Video Editing</h3>
+                <p>
+                    Make your video flow perfectly and look its best.
+                </p>
+            </div>
+        </div>
+        <div class="portfolio-card">
+           <img src="photography.jpg" alt="My Image"width="100%" height="50%">
+            <div class="portfolio-info">
+                <h3>Photography</h3>
+                <p>
+                   Beautiful photos that keep your memories alive forever.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about" class="page">
+    <h3>Get To Know Me</h3>
+    <h2>About Me</h2>
+    <div class="about-box">
+        <p>
+            My name is Romelyn Econg.
+            I am a Bachelor of Science in Animation
+            and Multimedia Arts student at Universty
+            of Northwestern Mindanao.   
+        </p>
+        <p>
+           I’m passionate about making films, editing videos, and photography.
+        </p>
+        <p>
+           Beyond my studies, I'm actively seeking freelance and creative opportunities to apply my digital skills.
+        </p>
+        <p>
+            My goal is to graduate, become successful
+            in my chosen field, travel whenever and wherever I want, and live a beautiful life. 
+         </p>
+    </div>
+</section>
+<section id="contacts" class="page">
+    <h3>Let's Collaborate</h3>
+    <h2>Reach Out</h2>
+    <p>
+        Got a question, project, or idea to work on together? I’d love to hear from you.
+    </p>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>📧 Email: romelyn.econg@nmsc.edu.ph</p>
+            <p>📍 Location: P6 Pan-ay, Clarin, Misamis Occidental</p>
+            <p>💬 Facebook: <a href="https://web.facebook.com/ely.econg" target="_blank">Message Me</a></p>
+        </div>
+        <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form onsubmit="sendMessage(event)">
+                <input type="text"
+                placeholder="Your Name" required>
+                <input type="email"
+                placeholder="Your Email" required>
+                <textarea
+                placeholder="Your Message"
+                required></textarea>
+                <button type="submit" class="btn">
+                    Submit Message
+                </button>
+            </form>
+            <p id="form-message"></p>
+        </div>
+    </div>
+</section>
+<footer class="site-footer text-center">
+    <p class="footer-line">Romelyn Econg &mdash; University of Northwestern Mindanao &mdash;  P6 Pan-ay, Clarin, Misamis Occidental</p>
+
+    <p class="mb-0">&copy; 2026 Romelyn Econg | All rights reserved.</p>
+<script>
+function showPage(pageId, button) {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+    document.querySelectorAll('nav button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    button.classList.add('active');
+    window.scrollTo(0, 0);
+}
+function goTo(pageId) {
+    const buttons = document.querySelectorAll('nav button');
+    buttons.forEach(button => {
+        if (button.textContent.trim().toLowerCase() === pageId) {
+            showPage(pageId, button);
+        }
+    });
+}
+function sendMessage(event) {
+    event.preventDefault();
+    document.getElementById('form-message').textContent =
+        "Thank you for your message!";
+    event.target.reset();
+}
+</script>
+</body>
+</html>
